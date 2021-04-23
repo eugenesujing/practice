@@ -1,0 +1,94 @@
+*{
+  margin:0;
+  padding: 0;
+}
+h1{
+
+  text-align : center;
+  background-color: orange;
+  padding: 10px 0px;
+  font-family:"Bookman Old Style",serif;
+}
+
+.navbar{
+  text-align: left;
+  background-color:black;
+  padding: 10px 0px;
+}
+
+.navbar a{
+  text-decoration:none;
+  color:orange;
+  margin-bottom:20px;
+  padding:5px 20px;
+  width:25%;
+  box-sizing: border-box;
+
+}
+
+a:hover{
+  color:white;
+}
+a:active{
+  color:red;
+}
+
+.container{
+  width:90%;
+  overflow: hidden;
+  margin:auto;
+}
+
+.pic{
+    font: 36px "Lucida Console", monospace;
+    background-image: url('../images/navb.jpg');
+    padding: 70px;
+    color:white;
+}
+
+
+#feel{
+  text-align:  left;
+  padding-left: 220px;
+}
+
+#love{
+  text-align: right;
+  padding-right: 220px;
+}
+.article1{
+  float:left;
+  width:60%;
+  background-color: grey;
+  margin-top: 20px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+.article2{
+  margin-top: 20px;
+  float:right;
+  width:40%;
+  padding: 10px 20px;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+footer{
+  text-align: center;
+  padding: 20px;
+  background-color: black;
+  color:white;
+}
+
+
+@media(max-width:600px){
+
+  .article1{
+    width:100%;
+    float:none;
+  }
+  .article2{
+    width:100%;
+    float:none;
+  }
+}
