@@ -1,0 +1,117 @@
+:root{
+  --orange:#FDAB00;
+  --black:#222;
+  --grey:#eee;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  min-height: 55vw;
+  width:100%;
+  font-size: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+
+}
+
+.wrapper{
+  position: relative;
+  min-height: 55vw;
+  width: 100%;
+  overflow: hidden;
+
+}
+
+.layer{
+  position: absolute;
+  min-height: 55vw;
+  overflow: hidden;
+}
+
+.top{
+  background: var(--grey);
+  z-index: 2;
+  width:50vw;
+
+}
+
+.bottom{
+  background-color: var(--black);
+  z-index:1;
+  width:100%;
+  color:white;
+}
+.content-wrapper{
+  position: absolute;
+  width:100vw;
+  min-height: 55vw;
+}
+.top .content-text{
+  position: absolute;
+  width:25%;
+  left:5%;
+  top:40%;
+  text-align:center;
+  transform:translate(0,-50%);
+}
+
+
+.bottom .content-text{
+  position: absolute;
+  right:5%;
+  top:40%;
+  width:25%;
+  text-align: center;
+  transform:translate(0,-50%);
+}
+
+img{
+  width:35%;
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+}
+
+.layer h1{
+  font-size: 2em;
+}
+
+.bottom h1{
+  color:var(--orange);
+}
+
+.handle{
+  position: absolute;
+  top:0;
+  left:50%;
+  height: 100%;
+  z-index: 3;
+  background-color: var(--orange);
+  width:5px;
+}
+
+.skewed .handle{
+  top:50%;
+  transform-origin: top;
+  transform: rotate(30deg) translateY(-50%);
+  height:200%;
+}
+
+.skewed .top{
+  transform: skew(-30deg);
+  margin-left: -1000px;
+  width:calc(50vw + 1000px);
+}
+
+.skewed .top .content-wrapper{
+  transform: skew(30deg);
+  margin-left: 1000px;
+}
+
+@media(max-width:768px){
+  body{
+    font-size: 75%;
+  }
+}

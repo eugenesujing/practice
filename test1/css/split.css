@@ -84,7 +84,6 @@ a{
 }
 
 .right:before{
-
   position: absolute;
   content:"";
   background-color: var(--background-color-right);
