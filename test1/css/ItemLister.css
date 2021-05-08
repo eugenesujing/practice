@@ -1,0 +1,126 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+header{
+  background: LightGreen;
+  color:white;
+  height:100px;
+  width:100%;
+}
+
+.content-wrapper{
+
+  width:80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:auto;
+}
+header h1{
+  font-size: 3rem;
+  flex:1.5;
+}
+
+header input{
+  margin-top:5px;
+  flex:1;
+  height:35px;
+  padding-left: 9px;
+  font-size: 1rem;
+  border:1px solid LightGreen;
+  border-radius: 4px;
+  width:100%;
+}
+
+header input:focus{
+  outline: none;
+}
+
+form{
+  width:80%;
+  border:solid 1px LightGrey;
+  margin: auto;
+  padding: 10px 10px;
+  margin-top: 19px;
+  border-radius: 4px;
+}
+
+form input{
+  margin:5px 2px 10px 0;
+  height:35px;
+  border:1px solid LightGrey;
+  border-radius: 4px;
+  width:200px;
+  padding-left: 15px;
+}
+
+form input:focus{
+  outline:none;
+  border-color: lightblue;
+}
+
+form button{
+  height:35px;
+  padding: 0 10px;
+  border-radius: 4px;
+  background-color: darkgrey;
+  border:1px solid darkgrey;
+  cursor: pointer;
+}
+ul{
+
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+
+}
+
+ul:empty{
+  display:none;
+}
+
+form h2{
+  font-size: 1.8rem;
+}
+
+li{
+  position: relative;
+  padding: 20px;
+  border:solid 1px LightGrey;
+}
+li:not([style*="display: none"]) + li:not([style*="display: none"]){
+  border-top: none;
+}
+
+li:first-child{
+  border-radius: 4px 4px 0 0;
+}
+li:last-child{
+  border-radius: 0 0 4px 4px;
+}
+
+li a{
+  position: absolute;
+  right:5%;
+  top:22%;
+  text-decoration: none;
+  background-color: red;
+  color: white;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+@media(max-width:700px){
+  .content-wrapper{
+    display: block;
+  }
+  header h1{
+    font-size: 2rem;
+  }
+  /* header input{
+    width:100%;
+  } */
+
+}
