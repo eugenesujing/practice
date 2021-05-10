@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/ImageSlider.css">
+    <title>ImageSlider</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="arrow arrow-left">
+      </div>
+      <div class="slide slide1">
+        <div class="slide-content">
+          <span>Image One</span>
+        </div>
+
+
+      </div>
+      <div class="slide slide2">
+        <div class="slide-content">
+          <span>Image Two</span>
+        </div>
+      </div>
+      <div class="slide slide3">
+        <div class="slide-content">
+          <span>Image Three</span>
+        </div>
+      </div>
+      <div class="arrow arrow-right">
+
+      </div>
+    </div>
+    <script type="text/javascript">
+      const arrowLeft = document.querySelector(".arrow-left");
+      const arrowRight = document.querySelector(".arrow-right");
+      const slides = document.querySelectorAll(".slide");
+      arrowLeft.addEventListener('click',prev);
+      arrowRight.addEventListener('click',next);
+      var curr = 0;
+
+      function prev(e){
+        slides[curr].style.display='none';
+        if(curr===0){
+          curr=slides.length;
+        }
+        slides[curr-1].style.display='block';
+        curr--;
+      }
+
+      function next(e){
+        slides[curr].style.display='none';
+        if(curr===slides.length-1){
+          curr=-1;
+        }
+        slides[curr+1].style.display='block';
+        curr++;
+      }
+
+      function reset(){
+        for(var i=0; i<slides.length;i++){
+          slides[i].style.display='none';
+        }
+        curr=0;
+      }
+
+      function start(){
+        reset();
+        slides[0].style.display='block';
+      }
+
+
+      start();
+    </script>
+  </body>
+</html>
