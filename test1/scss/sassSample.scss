@@ -1,0 +1,75 @@
+@import "config";
+@import "btn";
+
+*{
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+body{
+  background-color:$light-color;
+  font-family: $font-stack;
+}
+
+.wrapper{
+  @include set-background($primary-color);
+  height:600px;
+}
+
+.container {
+  max-width: 1100px;
+  padding: 0 30px;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+header{
+
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
+  h2{
+    flex:3;
+  }
+  nav{
+    flex:1;
+    ul{
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      li{
+        padding: 15px;
+        cursor: pointer;
+      }
+      li:hover{
+        color:$secondary-color;
+      }
+    }
+  }
+}
+
+.showcase{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  &-content{
+    flex:1;
+    h1{
+      font-size: 3rem;
+      line-height: 1.2;
+    }
+  }
+
+  .pic{
+    flex:1;
+    img{
+      width: 100%;
+    }
+  }
+}
+
+@import "mobile"
