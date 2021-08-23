@@ -1,0 +1,106 @@
+:root{
+  --primary:#ddd;
+  --dark:#333;
+  --light:#fff;
+  --shadow: 0 1px 5px rgba(104,104,104,0.8);
+  --blueButton: #6495ED;
+  --darkgrey:#696969;
+  --homecolor:#ff8c00;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body{
+  height:100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar{
+  background-color: var(--homecolor);
+  height:8vh;
+  display: flex;
+  width: 100%;
+}
+
+.topbar h5{
+  color: white;
+  padding-top: 0.5rem;
+  margin-left: 8rem;
+}
+
+.topbar i{
+  color: white;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.main-content{
+  margin: 0.5rem;
+  padding: 0rem 0.5rem 0 0.5rem;
+
+}
+
+.main-content .heading{
+  margin-bottom: 1.5rem;
+}
+
+.mycard{
+  border: var(--blueButton) 3px solid;
+  border-radius: 10px;
+  height: 25vh;
+  padding: 0.1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.8rem;
+}
+
+.mycard-content{
+  display: flex;
+  height: 100%;
+}
+
+.mycard-content .img-box{
+  width:70%;
+  height: 95%;
+  border-radius: 10px;
+
+}
+
+.slicer .img-box{
+  background: url('../images/slicer.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.knife .img-box{
+  background: url('../images/knife.jpg') no-repeat center center;
+  background-size: cover;
+}
+.slip .img-box{
+  background: url('../images/slip.jpg') no-repeat center center;
+  background-size: cover;
+}
+.fryer .img-box{
+  background: url('../images/fryer.jpg') no-repeat center center;
+  background-size: cover;
+}
+.liquid .img-box{
+  background: url('../images/liquid.jpg') no-repeat center center;
+  background-size: cover;
+}
+.propane .img-box{
+  background: url('../images/propane.jpg') no-repeat center center;
+  background-size: cover;
+}
+.mycard-content .mycard-caption{
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

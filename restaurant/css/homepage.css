@@ -165,6 +165,9 @@ padding-right: 0.8rem;
   align-items: center;
   justify-content:space-between;
 }
+.app-bottom a{
+  text-decoration: none;
+}
 
 .app-bottom li{
   list-style: none;
