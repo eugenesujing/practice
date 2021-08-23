@@ -1,0 +1,207 @@
+:root{
+  --primary:#ddd;
+  --dark:#333;
+  --light:#fff;
+  --shadow: 0 1px 5px rgba(104,104,104,0.8);
+  --blueButton: #6495ED;
+  --darkgrey:#696969;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body{
+  height:100vh;
+  width: 100vw;
+  overflow-y: hidden;
+}
+
+.mycontainer{
+  margin: 1rem;
+  padding: 1rem;
+  height: 100vh;
+}
+
+.myheader{
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.myheader img{
+  width:3rem;
+  margin-right: 1rem;
+}
+
+.introduction p{
+  font-size: 0.8rem;
+}
+
+.mybottom{
+  margin: -50vh 1rem;
+  padding: 1rem;
+}
+
+.mybottom a{
+  margin-top: 30vh;
+  width:100%;
+  background-color: var(--blueButton);
+  border-color:var(--blueButton);
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/*----------------------login-------------------*/
+
+.login-form{
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+}
+
+.login-form .information{
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem 0;
+}
+
+
+.login-form .password{
+  margin-bottom: 1rem;
+}
+
+.login-form .labels{
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.login-form a{
+  text-decoration: none;
+  text-align:center;
+  margin: 1rem 0;
+  font-size: 0.8rem;
+  font-weight: bold;
+  background-color: var(--blueButton);
+  border-color:var(--blueButton);
+}
+
+.login-form .forgot{
+  margin: 0 0 1.4rem 0;
+  background-color: white;
+  color: var(--blueButton);
+}
+
+
+.myhr{
+  opacity: 1;
+}
+
+.signup{
+  text-align: center;
+  font-size: 0.8rem;
+}
+.signup h6{
+  font-size: 0.8rem;
+  font-weight: bolder;
+}
+
+.signup a{
+  width:100%;
+  color:var(--blueButton);
+  border: var(--blueButton) solid 0.08rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding-bottom: 0.3rem;
+}
+
+/*----------------profile settings------------*/
+
+.profile-form select{
+  width:100%;
+  margin-bottom: 0.8rem;
+}
+
+.profile-form label{
+  margin: 0.5rem 0;
+  font-size: 0.8rem;
+}
+
+.profile-form table{
+  width: 100%;
+  margin-bottom: 0.8rem;
+}
+
+table a{
+  text-decoration: none;
+  color:var(--darkgrey);
+}
+
+.profile-form .choices{
+  display: flex;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.profile-form .choices .show{
+  background-color: var(--blueButton);
+  color:white;
+}
+
+.profile-form .choice{
+  text-decoration: none;
+  color:var(--darkgrey);
+  border: solid black 1px;
+  border-right: 0;
+  text-align: center;
+  width: 50%;
+}
+
+.profile-form .workers .choice{
+  width: 20%;
+}
+
+.choice:first-of-type{
+    border-radius: 2px 0 0 2px;
+}
+.profile-form .choice:last-of-type{
+    border-radius: 0 2px 2px 0;
+    border-right: solid black 1px;
+}
+
+.profile-form i{
+  color:var(--blueButton);
+  padding-left: 1rem;
+}
+
+
+.mycheckbox{
+  display: flex;
+  margin-top: 1.5rem;
+}
+
+.mycheckbox .check{
+margin-top: 1.5rem;
+margin-right: 1rem;
+}
+
+.mycheck-content{
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  font-size: 0.8rem;
+}
+
+.save{
+    margin: -15vh 1rem;
+}
+
+.save a{
+  margin-top: 0vh;
+
+}
