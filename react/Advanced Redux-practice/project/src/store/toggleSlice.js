@@ -1,6 +1,6 @@
 import {createSlice} from '@reduxjs/toolkit'
 
-const initialState = {show: false}
+const initialState = {show: false, error: {}}
 
 const toggleSlice = createSlice({
     name: 'toggle',
@@ -8,6 +8,9 @@ const toggleSlice = createSlice({
     reducers:{
         toggle(state){
             state.show = !state.show
+        },
+        setError(state,actions){
+            state.error = actions.payload
         }
     }
 })
