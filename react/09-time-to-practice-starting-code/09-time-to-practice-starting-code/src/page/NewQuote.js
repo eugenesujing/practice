@@ -1,8 +1,11 @@
 import QuoteForm from '../components/quotes/QuoteForm'
 
-function NewQuote (){
+function NewQuote (props){
+    function onAddQuoteHandler(newQuote){
+        props.onAddQuote(newQuote)
+    }
     return <div>
-        <QuoteForm />
+        <QuoteForm onAddQuote={onAddQuoteHandler}/>
     </div>
 }
 

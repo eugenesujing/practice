@@ -47,3 +47,8 @@
 .actions button {
   font-size: 1.25rem;
 }
+
+.actions button:disabled{
+    background: grey;
+    cursor: not-allowed;
+}
