@@ -1,29 +1,54 @@
 import HighlightedQuote from '../components/quotes/HighlightedQuote'
-import {useParams} from 'react-router-dom'
+import {useParams, Link, Route, useLocation, useRouteMatch} from 'react-router-dom'
 import NoQuotes from './NoQuotes'
 import Comments from '../components/comments/Comments'
-import CommentsList from '../components/comments/CommentsList'
+import useHttp from '../hooks/hooks/use-http'
+import {getSingleQuote} from '../lib/lib/api'
+import {useEffect} from 'react'
+import LoadingSpinner from '../components/UI/LoadingSpinner'
 
-const DUMMY_COMMENTS=[{
-id: 'c1',
-text: 'Bravo!'
-},
-{
-id: 'c2',
-text: 'Awesome!'
-}]
 
-function QuoteDetails(props){
+
+function QuoteDetails(){
     const param = useParams()
+    const match = useRouteMatch()
+    const location = useLocation()
+    const {quoteId} = param
 
-    const foundQuote = props.quotes.find((quote)=>{return quote.id ===param.quoteId})
-    if(!foundQuote){
+    const {sendRequest,data, status, error} = useHttp(getSingleQuote,true)
+
+    useEffect(()=>{
+        sendRequest(quoteId)
+    },[sendRequest,quoteId ])
+
+    if(status === 'pending'){
+        return <div className = 'centered'><LoadingSpinner /></div>
+    }else if(error){
+        return <div className = 'centered focus'><p>{error}</p></div>
+    }
+
+
+    const foundQuote = data
+    if(!foundQuote.author){
         return <NoQuotes />
     }
+
+    const showComments = location.pathname===`${match.url}/comments`
+    let Button = <Link className='btn--flat' to={`${match.url}/comments`}>Load Comments</Link>
+    if(showComments){
+        Button = <Link className='btn--flat' to={`${match.url}`}>Hide Comments</Link>
+    }
+
+
     return <div>
         <HighlightedQuote quote={foundQuote}/>
-        <Comments/>
-        <CommentsList comments={DUMMY_COMMENTS}/>
+        <div className = 'centered'>
+            {Button}
+        </div>
+        <Route path={`${match.path}/comments`}>
+           <Comments quoteId = {quoteId}/>
+        </Route>
+
     </div>
 }
 
